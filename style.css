@@ -107,7 +107,7 @@ a > .header__nav-option::after {
 }
 
 .main {
-  flex: 0 1;
+  flex: 1 1;
 }
 
 .main > .container {
