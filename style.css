@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Jersey+10+Charted&family=Pixelify+Sans:wght@400..700&family=Platypi:ital,wght@0,300..800;1,300..800&display=swap");
+
+/* null styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:active {
+  color: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+/* end of null styles */
+
+:root {
+  --fz-headtxt: 30px;
+  --content-txt: 20px;
+}
+
+* {
+  font-family: "Platypi", sans-serif;
+  color: #eee;
+}
+
+h1 {
+  font-size: var(--fz-headtxt);
+}
+
+.wrapper {
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(200deg, #af6644, #af5931, #682814);
+}
+
+.container {
+  max-width: 1024px;
+  height: 100%;
+}
+
+.header {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 0px 20px 0px;
+  box-shadow: 1px 0 10px 4px rgba(78, 49, 29, 0.1);
+}
+
+.header__nav-menu {
+  width: 100%;
+}
+
+.header__nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 0 -5px;
+}
+
+a > .header__nav-option {
+  margin: 0 10px;
+  position: relative;
+}
+a > .header__nav-option:before {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: #853907;
+  top: 0;
+  left: -4px;
+}
+
+a > .header__nav-option::after {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: #853907;
+  top: 0;
+  left: 106%;
+}
+
+.header__nav-option {
+  margin: 0 5px;
+}
+
+.main {
+  flex: 0 1;
+}
+
+.main > .container {
+  display: grid;
+  grid-template:
+    "s-cnt cnt s-ad" 400px
+    "s-cnt cnt ." 1fr
+    / 15% 70% 15%;
+  overflow: hidden;
+}
+
+.content {
+  grid-area: cnt;
+  display: grid;
+  grid-template:
+    "img1 txt" 1fr
+    "img1 img2" 1fr
+    "txt2 img2" 1fr
+    "img3 txt3" 1fr
+    "img3 img4" 1fr
+    "txt4 img4" 1fr;
+}
+
+.side-content {
+  grid-area: s-cnt;
+}
+.side-advert {
+  grid-area: s-ad;
+}
+
+.content__img {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Pizza-3007395.jpg/1280px-Pizza-3007395.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-area: img1;
+  background-position: 50% 50%;
+  width: 100%;
+  height: 300px;
+  border: #853907 solid 3px;
+  box-shadow: inset 0 0 80px 40px #000;
+  transition: all 0.5s linear 0.2s;
+}
+
+.content__img:hover {
+  transform: scale(110%);
+  box-shadow: none;
+}
+
+.content__img-2 {
+  background-image: url("https://www.foodandwine.com/thmb/Wd4lBRZz3X_8qBr69UOu2m7I2iw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/classic-cheese-pizza-FT-RECIPE0422-31a2c938fc2546c9a07b7011658cfd05.jpg");
+  grid-area: img2;
+}
+
+.content__txt {
+  grid-area: txt;
+  font-size: var(--content-txt);
+  background-color: #4d250b;
+  border: #853907 solid 3px;
+  padding: 10px;
+  box-shadow: inset 0 0 100px 0px rgba(238, 238, 238, 0.1);
+}
+
+.content__txt > p {
+  color: #dbcdcd;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.content__txt-2 {
+  grid-area: txt2;
+}
+.content__txt-3 {
+  grid-area: txt3;
+}
+
+.content__txt-4 {
+  grid-area: txt4;
+}
+
+.content__img-3 {
+  background-image: url("https://www.southernliving.com/thmb/3x3cJaiOvQ8-3YxtMQX0vvh1hQw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/2652401_QFSSL_SupremePizza_00072-d910a935ba7d448e8c7545a963ed7101.jpg");
+  grid-area: img3;
+}
+
+.content__img-4 {
+  background-image: url("https://www.moulinex-me.com/medias/?context=bWFzdGVyfHJvb3R8MTQzNTExfGltYWdlL2pwZWd8aGNlL2hmZC8xNTk2ODYyNTc4NjkxMC5qcGd8MmYwYzQ4YTg0MTgzNmVjYTZkMWZkZWZmMDdlMWFlMjRhOGIxMTQ2MTZkNDk4ZDU3ZjlkNDk2MzMzNDA5OWY3OA");
+  grid-area: img4;
+}
+
+.side-content {
+  background-color: #ad7140;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 3px;
+}
+
+.side-content__card .card__p:nth-of-type(1) {
+  font-size: 16px;
+  font-style: italic;
+}
+
+.side-content__card .card__p:nth-of-type(2) {
+  font-size: 12px;
+  text-align: end;
+}
+
+.side-advert {
+  background-color: #886548;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 5px;
+}
+
+.side-advert__card {
+  width: 145px;
+  height: 125px;
+  background-color: #b6b3b3;
+  border-radius: 3px;
+}
+
+.footer {
+  height: 80px;
+  width: 100%;
+  background-color: #cf986e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer > .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__links {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0px -5px;
+}
+
+.footer__link {
+  width: 50px;
+  height: 50px;
+  margin: 0 5px;
+  border-radius: 5px;
+}
+.footer__link:nth-of-type(1) {
+  background-image: url(https://static-00.iconduck.com/assets.00/youtube-icon-2048x2048-wiwalbpx.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.footer__link:nth-of-type(2) {
+  background-image: url(https://cdn.pixabay.com/photo/2021/06/15/12/14/instagram-6338393_1280.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.footer__link:nth-of-type(3) {
+  background-image: url(https://cdn-icons-png.flaticon.com/256/124/124010.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.footer__link:nth-of-type(4) {
+  background-image: url(https://cdn3.iconfinder.com/data/icons/social-media-chamfered-corner/154/telegram-512.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.footer__link:nth-of-type(5) {
+  background-image: url(https://i.pinimg.com/originals/4a/ce/97/4ace97c305e13f6b39a58b457f881ae4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 1024px) {
+  .main > .container {
+    display: grid;
+    grid-template:
+      "cnt cnt"
+      "s-cnt s-ad" / 60% 40%;
+    overflow: hidden;
+  }
+  .side-advert {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+  }
+  .main > .container {
+    display: grid;
+    grid-template:
+      "cnt"
+      "s-cnt" "s-ad";
+    overflow: hidden;
+  }
+  .side-advert {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  h1 {
+    font-size: calc(var(--fz-headtxt) - 7px);
+  }
+  .content__txt {
+    font-size: calc(var(--content-txt) - 7px);
+  }
+}
